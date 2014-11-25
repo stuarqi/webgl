@@ -33,6 +33,17 @@ function main() {
         0.0, 0.0, 1.0, 0.0,
         0.0, 0.0, 0.0, 1.0
     ]);
+
+    /* 缩放矩阵
+
+    |-                    -|
+    |  sx   0.0  0.0  0.0  |
+    |  0.0  sy   0.0  0.0  |
+    |  0.0  0.0  sz   0.0  |
+    |  0.0  0.0  0.0  1.0  |
+    |-                    -|
+
+     */
     var u_xformMatrix = gl.getUniformLocation(gl.program, 'u_xformMatrix');
     gl.uniformMatrix4fv(u_xformMatrix, false, xformMatrix);
 
