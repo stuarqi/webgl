@@ -34,6 +34,18 @@ function main() {
         0.5, 0.5, 0.0, 1.0
     ]);
 
+    /* 平移矩阵
+
+    |-                    -|
+    |  1.0  0.0  0.0  0.0  |
+    |  0.0  1.0  0.0  0.0  |
+    |  0.0  0.0  1.0  0.0  |
+    |  tx   ty   tz   1.0  |
+    |-                    -|
+
+
+     */
+
     var u_xformMatrix = gl.getUniformLocation(gl.program, 'u_xformMatrix');
     gl.uniformMatrix4fv(u_xformMatrix, false, xformMatrix);
 
